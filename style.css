@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f5f7;
+  color: #2b2d33;
+  margin: 0;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e4e8;
+  border-radius: 10px;
+  padding: 28px 32px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 34px;
+  border-top: 1px solid #e2e4e8;
+  padding-top: 20px;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 18px 0 8px;
+  color: #4b5563;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #4b5563;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.subject-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.subject-row input {
+  flex: 1;
+}
+
+.subject-row .remove-subject {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-size: 0.9rem;
+}
+
+#submitBtn {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #1f2937;
+  margin-left: 8px;
+}
+
+.form-actions {
+  margin-top: 16px;
+}
+
+#statusMsg {
+  margin-top: 14px;
+  font-size: 0.88rem;
+}
+
+#statusMsg.success {
+  color: #15803d;
+}
+
+#statusMsg.error {
+  color: #b91c1c;
+}
+
+.record-card {
+  border: 1px solid #e2e4e8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 12px;
+}
+
+.record-card .record-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cgpa-badge {
+  background: #2563eb;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.record-card p {
+  margin: 6px 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.record-card ul {
+  margin: 6px 0 10px;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+.record-actions button {
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.edit-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}

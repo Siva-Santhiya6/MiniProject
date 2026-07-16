@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CGPA Calculator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>CGPA Calculator</h1>
+
+  <form id="recordForm">
+    <input type="hidden" id="recordId" />
+
+    <div class="row">
+      <div class="field">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" required />
+      </div>
+      <div class="field">
+        <label for="registerNumber">Register Number</label>
+        <input type="text" id="registerNumber" />
+      </div>
+      <div class="field">
+        <label for="semester">Semester</label>
+        <input type="text" id="semester" required />
+      </div>
+    </div>
+
+    <h3>Subjects</h3>
+    <div id="subjectsList"></div>
+    <button type="button" id="addSubjectBtn" class="secondary-btn">+ Add Subject</button>
+
+    <div class="form-actions">
+      <button type="submit" id="submitBtn">Save Record</button>
+      <button type="button" id="resetBtn" class="secondary-btn">Reset</button>
+    </div>
+  </form>
+
+  <div id="statusMsg"></div>
+
+  <h2>Saved Records</h2>
+  <div id="recordsList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
