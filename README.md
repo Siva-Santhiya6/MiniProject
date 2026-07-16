@@ -1,37 +1,47 @@
-# CGPA Calculator — Frontend
+# CGPA Calculator
 
-Plain HTML/CSS/JS frontend that consumes the backend REST API for full CRUD.
+This project contains both the Frontend and Backend of the CGPA Calculator application.
 
-## Files
+## Project Structure
+
 ```
-frontend/
-├── index.html
-├── style.css
-└── script.js
+MiniProject/
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+└── backend/
+    ├── config/
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    ├── server.js
+    └── package.json
 ```
+
+## Frontend
+
+- Built using HTML, CSS and JavaScript.
+- Connects to the backend REST API.
+- Allows users to add, edit, view and delete CGPA records.
+
+## Backend
+
+- Built using Node.js, Express and MongoDB.
+- Provides CRUD APIs for CGPA records.
+- Calculates CGPA automatically.
 
 ## Setup
-No build step needed — pure HTML/CSS/JS.
 
-1. Make sure the backend is running at `http://localhost:5000` (see backend/README.md).
-2. Open `index.html` directly in a browser, or serve it with a simple static server:
-   ```
-   npx serve .
-   ```
-   or the VS Code "Live Server" extension.
+### Backend
 
-## What it does
-- Add subjects dynamically (name, credit, grade point) and submit to create a record — CGPA is calculated by the backend.
-- View all saved records with their calculated CGPA.
-- Edit a record (loads it back into the form, PUT on submit).
-- Delete a record.
-
-## Config
-If your backend runs on a different port/host, update `API_BASE` at the top of `script.js`:
-```js
-const API_BASE = "http://localhost:5000/api/records";
+```bash
+cd backend
+npm install
+npm run dev
 ```
 
-## Notes for teammate
-- This folder is self-contained; push it as its own repo/folder.
-- No dependencies, no node_modules — nothing to gitignore.
+### Frontend
+
+Open `frontend/index.html` in your browser or use Live Server.

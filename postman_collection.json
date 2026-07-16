@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "CGPA Calculator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Record",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:5000/api/records",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"studentName\": \"Saumya S\",\n  \"registerNumber\": \"7212XXXXXX\",\n  \"semester\": \"Semester 4\",\n  \"subjects\": [\n    { \"subjectName\": \"DAA\", \"credit\": 4, \"gradePoint\": 9 },\n    { \"subjectName\": \"DBMS\", \"credit\": 3, \"gradePoint\": 8 },\n    { \"subjectName\": \"OS\", \"credit\": 4, \"gradePoint\": 9 }\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Records",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/records"
+      }
+    },
+    {
+      "name": "Get Record By ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/records/REPLACE_WITH_ID"
+      }
+    },
+    {
+      "name": "Update Record",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:5000/api/records/REPLACE_WITH_ID",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"subjects\": [\n    { \"subjectName\": \"DAA\", \"credit\": 4, \"gradePoint\": 10 },\n    { \"subjectName\": \"DBMS\", \"credit\": 3, \"gradePoint\": 9 },\n    { \"subjectName\": \"OS\", \"credit\": 4, \"gradePoint\": 9 }\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Record",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/records/REPLACE_WITH_ID"
+      }
+    },
+    {
+      "name": "Calculate Only (no save)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:5000/api/calculate",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"subjects\": [\n    { \"subjectName\": \"DAA\", \"credit\": 4, \"gradePoint\": 9 },\n    { \"subjectName\": \"DBMS\", \"credit\": 3, \"gradePoint\": 8 }\n  ]\n}"
+        }
+      }
+    }
+  ]
+}
